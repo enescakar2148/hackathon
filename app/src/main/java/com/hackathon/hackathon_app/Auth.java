@@ -7,7 +7,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.hackathon.hackathon_app.Fragment.LoginFragment;
+import com.hackathon.hackathon_app.Fragment.SignInFragment;
+
+public class Auth extends AppCompatActivity {
 
 LoginFragment loginFragment = new LoginFragment();
 SignInFragment signInFragment = new SignInFragment();

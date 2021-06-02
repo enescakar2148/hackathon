@@ -1,4 +1,4 @@
-package com.hackathon.hackathon_app;
+package com.hackathon.hackathon_app.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import com.hackathon.hackathon_app.R;
 
 import org.jetbrains.annotations.NotNull;
 
