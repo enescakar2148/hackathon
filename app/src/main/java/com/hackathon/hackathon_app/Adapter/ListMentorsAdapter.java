@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -39,6 +40,13 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
                 mContext.startActivity(intent);
             }
         });
+        holder.mentorPp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(mContext, MentorInfo.class);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -48,9 +56,11 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
 
     class ViewHolder extends RecyclerView.ViewHolder{
     private CardView card;
+    private ImageView mentorPp;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             card = itemView.findViewById(R.id.card);
+            mentorPp = itemView.findViewById(R.id.mentorPp);
         }
     }
 }

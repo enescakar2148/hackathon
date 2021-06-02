@@ -23,6 +23,7 @@
                 android:orientation="vertical"
                 android:gravity="center">
                     <ImageView
+                        android:id="@+id/mentorPp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/user"/>
