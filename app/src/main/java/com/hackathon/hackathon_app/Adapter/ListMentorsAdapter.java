@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackathon.hackathon_app.R;
+import com.hackathon.hackathon_app.UI.ChatRoom;
 import com.hackathon.hackathon_app.UI.MentorInfo;
 
 public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.ViewHolder> {
@@ -33,7 +34,8 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(mContext, MentorInfo.class);
+                Intent intent= new Intent(mContext, ChatRoom.class);
+                intent.putExtra("ChatId","ChatRoom_"+ position+1);
                 mContext.startActivity(intent);
             }
         });
