@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackathon">
-        <activity android:name=".UI.Feed"></activity>
+        <activity android:name=".UI.Fag"></activity>
+        <activity android:name=".UI.Feed" />
         <activity android:name=".UI.ListMentors" />
         <activity android:name=".Auth" />
         <activity android:name=".UI.SplashScreen">

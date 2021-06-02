@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +38,8 @@ public class ListMentors extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ListMentors.this, "Sıkça Sorulan Sorular", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Fag.class);
+                startActivity(intent);
             }
         });
 
