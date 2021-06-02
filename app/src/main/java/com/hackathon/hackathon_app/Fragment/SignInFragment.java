@@ -19,7 +19,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.hackathon.hackathon_app.R;
-import com.hackathon.hackathon_app.UI.Feed;
+import com.hackathon.hackathon_app.UI.ChatRoom;
+import com.hackathon.hackathon_app.UI.Tags;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -61,7 +62,7 @@ public class SignInFragment extends Fragment {
                                 @Override
                                 public void onSuccess(AuthResult authResult) {
                                     //intent eklenecek
-                                    Intent intent = new Intent(getContext(), Feed.class);
+                                    Intent intent = new Intent(getContext(), Tags.class);
                                     startActivity(intent);
                                     getActivity().finish();
                                 }

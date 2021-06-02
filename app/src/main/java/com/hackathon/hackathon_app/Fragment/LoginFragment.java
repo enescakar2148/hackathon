@@ -18,14 +18,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.hackathon.hackathon_app.R;
-import com.hackathon.hackathon_app.UI.Feed;
+import com.hackathon.hackathon_app.UI.ListMentors;
 
 import org.jetbrains.annotations.NotNull;
 
 public class LoginFragment extends Fragment {
-    EditText email_edittext;
-    EditText password_edittext;
-    FirebaseAuth mAuth;
+    private EditText email_edittext;
+    private EditText password_edittext;
+    private FirebaseAuth mAuth;
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
@@ -54,7 +54,7 @@ public class LoginFragment extends Fragment {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                Intent intent = new Intent(getContext(), Feed.class);
+                                Intent intent = new Intent(getContext(), ListMentors.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             }

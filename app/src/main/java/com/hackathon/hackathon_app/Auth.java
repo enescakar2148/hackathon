@@ -8,17 +8,16 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.hackathon.hackathon_app.Fragment.LoginFragment;
-import com.hackathon.hackathon_app.Fragment.SignInFragment;
 
 public class Auth extends AppCompatActivity {
 
-LoginFragment loginFragment = new LoginFragment();
-SignInFragment signInFragment = new SignInFragment();
+private  LoginFragment loginFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_auth);
+        loginFragment  = new LoginFragment();
 
         setFragment(loginFragment);
         System.out.println("Yüklendi");

@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackathon">
         <activity android:name=".UI.Fag"></activity>
-        <activity android:name=".UI.Feed" />
+        <activity android:name=".UI.ChatRoom" />
+        <activity android:name=".UI.Tags" />
         <activity android:name=".UI.ListMentors" />
         <activity android:name=".Auth" />
         <activity android:name=".UI.SplashScreen">

@@ -48,6 +48,8 @@ public class ListMentors extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ListMentors.this, "Tagları Düzenle", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Tags.class);
+                startActivity(intent);
             }
         });
     }
