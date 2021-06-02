@@ -49,7 +49,7 @@
             android:background="#fff"
             android:hint="Mesaj Yaz"
             android:inputType="textAutoComplete|textMultiLine"
-            android:maxHeight="300dp"/>
+            android:maxHeight="300dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

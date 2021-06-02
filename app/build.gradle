@@ -9,12 +9,15 @@ android {
 
     defaultConfig {
         applicationId "com.hackathon.hackathon_app"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
     buildTypes {
@@ -44,4 +47,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.android.support:multidex:1.0.3'
 }
