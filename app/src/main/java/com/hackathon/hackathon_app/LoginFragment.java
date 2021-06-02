@@ -49,16 +49,16 @@ public class LoginFragment extends Fragment {
                 String email = email_edittext.getText().toString();
                 String password = password_edittext.getText().toString();
 
-                mAuth.createUserWithEmailAndPassword(email, password)
+                mAuth.signInWithEmailAndPassword(email, password)
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-
+                                //intent eklenecek
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull @NotNull Exception e) {
-                        Toast.makeText(getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), e.getLocalizedMessage().toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
