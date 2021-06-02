@@ -56,7 +56,7 @@ public class SignInFragment extends Fragment {
                 String password = password_edittext.getText().toString();
                 String repassword = repassword_edittext.getText().toString();
 
-                if (password.matches(repassword)){
+                if (password.matches(repassword)&&!name.matches("")&&!email.matches("")&&!password.matches("")){
                     mAuth.createUserWithEmailAndPassword(email, password)
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
@@ -73,7 +73,7 @@ public class SignInFragment extends Fragment {
                         }
                     });
                 }else{
-                    Toast.makeText(getContext(), "Girdiğiniz parolalar uyuşmamaktadır.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Alanları ve parolalarınızı kontrol ediniz.", Toast.LENGTH_SHORT).show();
                 }
 
             }

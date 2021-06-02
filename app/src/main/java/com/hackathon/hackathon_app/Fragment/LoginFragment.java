@@ -49,7 +49,7 @@ public class LoginFragment extends Fragment {
             public void onClick(View v) {
                 String email = email_edittext.getText().toString();
                 String password = password_edittext.getText().toString();
-
+                if (!email.matches("")&&!password.matches("")){
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
@@ -64,6 +64,9 @@ public class LoginFragment extends Fragment {
                         Toast.makeText(getContext(), e.getLocalizedMessage().toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
+            }else{
+                    Toast.makeText(getContext(), "Lütfen alanları doldurunuz.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

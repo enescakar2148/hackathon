@@ -12,13 +12,13 @@
         android:layout_margin="10dp"
         app:cardCornerRadius="15dp">
 
-                <TextView
-                    android:id="@+id/tagText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25dp"
-                    android:textAlignment="textEnd"
-                    android:padding="3dp"/>
+        <TextView
+            android:id="@+id/tagText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textSize="25dp" />
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
