@@ -1,5 +1,6 @@
 package com.hackathon.hackathon_app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.hackathon.hackathon_app.R;
+import com.hackathon.hackathon_app.UI.Feed;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -52,7 +54,9 @@ public class LoginFragment extends Fragment {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                //intent eklenecek
+                                Intent intent = new Intent(getContext(), Feed.class);
+                                startActivity(intent);
+                                getActivity().finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
