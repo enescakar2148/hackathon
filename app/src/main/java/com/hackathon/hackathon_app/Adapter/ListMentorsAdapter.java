@@ -1,15 +1,25 @@
 package com.hackathon.hackathon_app.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackathon.hackathon_app.R;
+import com.hackathon.hackathon_app.UI.MentorInfo;
 
 public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.ViewHolder> {
+    private Context mContext;
+
+    public ListMentorsAdapter(Context mContext) {
+        this.mContext = mContext;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -20,7 +30,13 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListMentorsAdapter.ViewHolder holder, int position) {
-
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(mContext, MentorInfo.class);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -29,9 +45,10 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-
+    private CardView card;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            card = itemView.findViewById(R.id.card);
         }
     }
 }

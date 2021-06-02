@@ -25,7 +25,7 @@ public class ListMentors extends AppCompatActivity {
         //INITALIZE
         recyclerView = findViewById(R.id.recycler_mentors);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        listMentorsAdapter = new ListMentorsAdapter();
+        listMentorsAdapter = new ListMentorsAdapter(this);
         recyclerView.setAdapter(listMentorsAdapter);
 
         edit_tags_button = findViewById(R.id.edit_tags_button);
