@@ -3,6 +3,7 @@ package com.hackathon.hackathon_app.UI;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -22,6 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.hackathon.hackathon_app.Adapter.MessageAdapter;
 import com.hackathon.hackathon_app.R;
 
 import java.util.ArrayList;
@@ -32,6 +34,7 @@ import java.util.Map;
 public class ChatRoom extends AppCompatActivity {
 
     private EditText messageEditText;
+    private MessageAdapter messageAdapter;
     private RecyclerView chatRecycler;
     private FloatingActionButton sendMessage;
     private TextView chatIdText;
@@ -52,11 +55,18 @@ public class ChatRoom extends AppCompatActivity {
         }
         //initalize
         messageEditText = findViewById(R.id.messageEditText);
+
         chatRecycler = findViewById(R.id.chatRecycler);
+        messageAdapter = new MessageAdapter(this, checkTimes, senders, messages);
+        chatRecycler.setLayoutManager(new LinearLayoutManager(this));
+        chatRecycler.setAdapter(messageAdapter);
+
         sendMessage = findViewById(R.id.sendMessage);
         chatIdText = findViewById(R.id.chatId);
         chatIdText.setText(chatId);
+
         mAuth = FirebaseAuth.getInstance();
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
         email = currentUser.getEmail();
         db = FirebaseFirestore.getInstance();
@@ -125,6 +135,8 @@ public class ChatRoom extends AppCompatActivity {
                                     messages.add(tempMessage);
                                     checkTimes.add(tempTime);
                                     senders.add(tempSender);
+
+                                    messageAdapter.notifyDataSetChanged();
 
                                     System.out.println(messages);
 
