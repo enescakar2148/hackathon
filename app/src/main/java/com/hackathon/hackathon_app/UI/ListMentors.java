@@ -17,7 +17,7 @@ public class ListMentors extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ListMentorsAdapter listMentorsAdapter;
-    private Button edit_tags_button, sss_button;
+    private View edit_tags_button, sss_button, about_us_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ public class ListMentors extends AppCompatActivity {
 
         edit_tags_button = findViewById(R.id.edit_tags_button);
         sss_button = findViewById(R.id.sss_button);
+        about_us_button = findViewById(R.id.aboutusbutton);
 
         //OnClicks Tests/Events
 
@@ -49,6 +50,16 @@ public class ListMentors extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(ListMentors.this, "Tagları Düzenle", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), Tags.class);
+                startActivity(intent);
+            }
+        });
+
+        //about us
+        about_us_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ListMentors.this, "Biz kimiz?", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), AboutUs.class);
                 startActivity(intent);
             }
         });

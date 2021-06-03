@@ -9,13 +9,15 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#252958"
         android:elevation="5dp"
         android:layout_margin="10dp"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="50dp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_margin="0dp"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -26,38 +28,69 @@
                         android:id="@+id/mentorPp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/user"/>
+                        android:src="@drawable/mentormanimg"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginLeft="15dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Mentor Name"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:textColor="#000"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Alanı"
-                    android:textSize="17dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mentor Hakkında Kısa Bilgi"
-                    android:textSize="17dp"/>
+                    android:text="Alanı"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kişi Sayısı"
+                    android:text="Mentor Name"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/star"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/star"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/star"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/star"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/star"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="16 kişi"
+                    android:textColor="@color/white"
                     android:textSize="17dp"
                     android:textAlignment="textEnd"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:layout_marginRight="40dp"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
