@@ -11,6 +11,7 @@ android {
         applicationId "com.hackathon.hackathon_app"
         minSdkVersion 19
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
