@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ import com.hackathon.hackathon_app.UI.ChatRoom;
 import com.hackathon.hackathon_app.UI.Tags;
 
 import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
 
 public class SignInFragment extends Fragment {
 
@@ -80,7 +82,7 @@ public class SignInFragment extends Fragment {
         });
 
 
-        Button loginbutton = view.findViewById(R.id.login_button_signinfrag);
+        TextView loginbutton = view.findViewById(R.id.login_button_signinfrag);
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

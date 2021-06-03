@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -71,7 +72,7 @@ public class LoginFragment extends Fragment {
         });
 
 
-        Button signinbutton = view.findViewById(R.id.singin_button_loginfrag);
+        TextView signinbutton = view.findViewById(R.id.singin_button_loginfrag);
         signinbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
