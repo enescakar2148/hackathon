@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,36 +23,26 @@ public class SplashScreen extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        Splash splash = new Splash();
-        splash.start();
-    }
+        new CountDownTimer(3000, 1000){
 
-    class Splash extends Thread {
-        public void run() {
-            try {
-                sleep(3000);
-            }
-            catch (InterruptedException e) {
-                e.printStackTrace();
+            @Override
+            public void onTick(long millisUntilFinished) {
+
             }
 
-
-            FirebaseUser currentUser = mAuth.getCurrentUser();
-            if(currentUser != null){
-                Intent intent = new Intent(getApplicationContext(), ListMentors.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }else{
-                Intent intent = new Intent(SplashScreen.this, Auth.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+            @Override
+            public void onFinish() {
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                if(currentUser != null){
+                    Intent intent = new Intent(getApplicationContext(), ListMentors.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(SplashScreen.this, Auth.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
             }
-
-
-        }
-
-        public void start() {
-            run();
-        }
+        }.start();
     }
 }

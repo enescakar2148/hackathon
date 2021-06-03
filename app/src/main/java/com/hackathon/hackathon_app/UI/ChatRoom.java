@@ -57,7 +57,6 @@ public class ChatRoom extends AppCompatActivity {
         messageEditText = findViewById(R.id.messageEditText);
 
 
-
         sendMessage = findViewById(R.id.sendMessage);
         chatIdText = findViewById(R.id.chatId);
         chatIdText.setText(chatId);
@@ -67,10 +66,17 @@ public class ChatRoom extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         email = currentUser.getEmail();
         db = FirebaseFirestore.getInstance();
-        realtimeListener();
         checkTimes = new ArrayList<>();
         senders = new ArrayList<>();
         messages = new ArrayList<>();
+
+
+        realtimeListener();
+
+        chatRecycler = findViewById(R.id.chatRecycler);
+        messageAdapter = new MessageAdapter(this, checkTimes, senders, messages);
+        chatRecycler.setLayoutManager(new LinearLayoutManager(this));
+        chatRecycler.setAdapter(messageAdapter);
 
         sendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,11 +112,6 @@ public class ChatRoom extends AppCompatActivity {
                 }
             }
         });
-
-        chatRecycler = findViewById(R.id.chatRecycler);
-        messageAdapter = new MessageAdapter(this, checkTimes, senders, messages);
-        chatRecycler.setLayoutManager(new LinearLayoutManager(this));
-        chatRecycler.setAdapter(messageAdapter);
     }
 
     public void realtimeListener(){
