@@ -7,15 +7,27 @@
     tools:context=".UI.Fag">
 
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sssimg" />
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/soru_edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,87 +38,193 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Soru: lorem ipsum"
-                android:textSize="24sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Cevap: lorem ipsum"
-                android:textSize="16sp"
-                android:padding="3dp"/>
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Soru: lorem ipsum"
-                android:textSize="24sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Cevap: lorem ipsum"
-                android:textSize="16sp"
-                android:padding="3dp"/>
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Soru: lorem ipsum"
-                android:textSize="24sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Cevap: lorem ipsum"
-                android:textSize="16sp"
-                android:padding="3dp"/>
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Soru: lorem ipsum"
-                android:textSize="24sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Cevap: lorem ipsum"
-                android:textSize="16sp"
-                android:padding="3dp"/>
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Soru: lorem ipsum"
-                android:textSize="24sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Cevap: lorem ipsum"
-                android:textSize="16sp"
-                android:padding="3dp"/>
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Soru: lorem ipsum"
-                android:textSize="24sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:text="Cevap: lorem ipsum"
-                android:textSize="16sp"
-                android:padding="3dp"/>
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/faguptext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="Soru: lorem ipsum"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fagdowntext"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="Cevap: lorem ipsum"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
@@ -126,14 +244,28 @@
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="sorugonder"
+        android:textColor="@color/white"
+        android:background="@drawable/sssbutton"
         android:text="gönder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#095BAA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="SIK SORULAN SORULAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
