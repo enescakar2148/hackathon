@@ -44,6 +44,7 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(mContext, MentorInfo.class);
+                intent.putExtra("ChatId","ChatRoom_"+ position+1);
                 mContext.startActivity(intent);
             }
         });
