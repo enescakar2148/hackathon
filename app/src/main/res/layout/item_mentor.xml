@@ -37,19 +37,21 @@
                 android:layout_marginLeft="15dp">
 
                 <TextView
+                    android:id="@+id/tag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Alanı"
                     android:textColor="@color/white"
-                    android:textSize="17dp"
-                     />
+                    android:textSize="17dp" />
+
                 <TextView
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Mentor Name"
                     android:textColor="@color/white"
                     android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

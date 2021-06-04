@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -15,11 +16,15 @@ import com.hackathon.hackathon_app.R;
 import com.hackathon.hackathon_app.UI.ChatRoom;
 import com.hackathon.hackathon_app.UI.MentorInfo;
 
+import java.util.ArrayList;
+
 public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.ViewHolder> {
     private Context mContext;
+    private ArrayList<String> tags;
 
-    public ListMentorsAdapter(Context mContext) {
+    public ListMentorsAdapter(Context mContext, ArrayList<String> tags) {
         this.mContext = mContext;
+        this.tags = tags;
     }
 
     @NonNull
@@ -32,6 +37,7 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListMentorsAdapter.ViewHolder holder, int position) {
+        holder.name.setText(tags.get(position));
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,10 +64,12 @@ public class ListMentorsAdapter extends RecyclerView.Adapter<ListMentorsAdapter.
     class ViewHolder extends RecyclerView.ViewHolder{
     private CardView card;
     private ImageView mentorPp;
+    private TextView name, tag;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             card = itemView.findViewById(R.id.card);
             mentorPp = itemView.findViewById(R.id.mentorPp);
+            name = itemView.findViewById(R.id.name);
         }
     }
 }

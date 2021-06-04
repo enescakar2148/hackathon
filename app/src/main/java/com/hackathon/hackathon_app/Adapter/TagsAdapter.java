@@ -50,15 +50,11 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
                 Drawable check = holder.item.getBackground();
                 int color = Color.TRANSPARENT;
 
-                System.out.println("check: "+check);
-                System.out.println("teal: "+R.color.teal_200);
                 if (check instanceof ColorDrawable) {
                     color = ((ColorDrawable) check).getColor();
-                    System.out.println("if: "+color);
                     holder.item.setBackgroundColor(ContextCompat.getColor(mContext, R.color.itemback));
                 }else {
                     holder.item.setBackgroundColor(ContextCompat.getColor(mContext, R.color.teal_200));
-                    System.out.println("else: "+color);
                 }
             }
         });

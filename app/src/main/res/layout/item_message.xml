@@ -34,7 +34,6 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_margin="2dp"
-                   android:text="a@mail.com"
                    android:textColor="#fff"
 
                    android:textSize="19dp"
@@ -45,7 +44,6 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_margin="2dp"
-                   android:text="Message sdjbgıaubgıpubc ıfdbarıpe"
 
                    android:textColor="#fff"
                    android:textSize="16dp" />
