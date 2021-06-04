@@ -1,14 +1,19 @@
 package com.hackathon.hackathon_app.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackathon.hackathon_app.R;
@@ -39,6 +44,24 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
         holder.textView.setText(tags.get(position));
         Drawable image = mContext.getResources().getDrawable(images.get(position));
         holder.tagImages.setImageDrawable(image);
+        holder.item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawable check = holder.item.getBackground();
+                int color = Color.TRANSPARENT;
+
+                System.out.println("check: "+check);
+                System.out.println("teal: "+R.color.teal_200);
+                if (check instanceof ColorDrawable) {
+                    color = ((ColorDrawable) check).getColor();
+                    System.out.println("if: "+color);
+                    holder.item.setBackgroundColor(ContextCompat.getColor(mContext, R.color.itemback));
+                }else {
+                    holder.item.setBackgroundColor(ContextCompat.getColor(mContext, R.color.teal_200));
+                    System.out.println("else: "+color);
+                }
+            }
+        });
     }
 
     @Override
@@ -49,10 +72,12 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textView;
         private ImageView tagImages;
+        private LinearLayout item;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.tagText);
             tagImages = itemView.findViewById(R.id.tagImages);
+            item = itemView.findViewById(R.id.item);
         }
     }
 }

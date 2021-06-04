@@ -13,11 +13,13 @@
         android:layout_margin="10dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#DDF2F2F2">
+
         <LinearLayout
+            android:id="@+id/item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="5dp">
 
             <ImageView
@@ -32,9 +34,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
+                android:text="Tag"
                 android:textAlignment="center"
-                android:textSize="25dp"
-                android:text="Tag"/>
+                android:textSize="25dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

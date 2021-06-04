@@ -11,7 +11,11 @@ public class Tags {
             "kimya",
             "biyoloji",
             "edebiyat",
-            "tarih"
+            "tarih",
+            "sinema",
+            "girişimcilik",
+            "uzay",
+            "sosyal medya"
     };
     private int[] images = {
             R.drawable.mathtag,
@@ -19,7 +23,11 @@ public class Tags {
             R.drawable.chemtag,
             R.drawable.biologytag,
             R.drawable.lecturetag,
-            R.drawable.historytag
+            R.drawable.historytag,
+            R.drawable.sinema,
+            R.drawable.girisimcilik,
+            R.drawable.space,
+            R.drawable.socialtag
     };
 
     public ArrayList<String> getTags(){
