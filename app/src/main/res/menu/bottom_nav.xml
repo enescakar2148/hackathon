@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Anasayfa"/>
+    <item
+        android:id="@+id/sss_button"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Sıkça Sorulan Sorular"/>
+    <item
+        android:id="@+id/aboutusbutton"
+        android:icon="@drawable/aboutusimg"
+        android:title="Hakkında"/>
+</menu>

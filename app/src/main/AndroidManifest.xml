@@ -12,9 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackathon">
-        <activity android:name=".UI.AboutUs"></activity>
         <activity android:name=".UI.MentorInfo" />
-        <activity android:name=".UI.Fag" />
         <activity android:name=".UI.ChatRoom" />
         <activity android:name=".UI.Tags" />
         <activity android:name=".UI.ListMentors" />
