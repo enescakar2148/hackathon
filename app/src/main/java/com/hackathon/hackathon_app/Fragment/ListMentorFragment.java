@@ -27,6 +27,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class ListMentorFragment extends Fragment {
+    private ArrayList<String> names;
+    private com.hackathon.hackathon_app.Model.Mentros mentorModel;
     private Context mContext;
     private RecyclerView recyclerView;
     private ListMentorsAdapter listMentorsAdapter;
@@ -45,9 +47,12 @@ public class ListMentorFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //INITALIZE
+        names = new ArrayList<>();
+        mentorModel = new com.hackathon.hackathon_app.Model.Mentros();
+        names =mentorModel.getTags();
         recyclerView = view.findViewById(R.id.recycler_mentors);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
-        listMentorsAdapter = new ListMentorsAdapter(mContext);
+        listMentorsAdapter = new ListMentorsAdapter(mContext, names);
         recyclerView.setAdapter(listMentorsAdapter);
 
     }
